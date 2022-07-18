@@ -1,0 +1,25 @@
+﻿@model Category
+
+<div style="text-align:center;">
+<form method="post" style="display:inline-block;">
+    <fieldset>
+        <br /><br/>
+        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+          <h5 class="card-header">!Remove From Orders!</h5>
+          <div class="card-body">
+            <h8 class="card-text">Dish Name: @Model.Name</h8>
+            <br />
+            <h8 class="card-text">Order Quantity: @Model.DisplayOrder</h8>
+            <br/>
+            <h8 class="card-text">Time : @Model.CreatedDate</h5>
+          </div>
+        </div>
+        <br/>
+        <div>
+        <label>&nbsp;</label>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </fieldset>
+</form>
+</div>

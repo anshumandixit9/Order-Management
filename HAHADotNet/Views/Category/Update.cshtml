@@ -1,0 +1,31 @@
+﻿@model Category
+
+<div style="text-align:center;">
+<form method="post" asp-action="Update" style="display:inline-block; width:auto;">
+    <fieldset>
+        <h1>Update Dish</h1>
+        <div asp-validation-summary="All"></div>
+        <div>
+        <label asp-for="Name"><b>Dish Name</b></label>
+        <br />
+        <input asp-for="Name" class="form-control"  />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div>
+        <label asp-for="DisplayOrder"><b>Order Quantity</b></label>
+        <br />
+        <input asp-for ="DisplayOrder"  class="form-control"/>
+        <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+        </div>
+        <div>
+        <label>&nbsp;</label>
+        <br /><br />
+        <button type="submit" class="btn btn-success">Update</button>
+        <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </fieldset>
+</form>
+</div>
+@section Scripts{
+    <partial name = "_ValidationScriptsPartial"/>
+}
